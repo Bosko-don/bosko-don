@@ -1,0 +1,117 @@
+numbers = [1,2,3,4]
+for num in numbers:
+  print(num)
+
+numbers = [1,2,3,4]
+for num in numbers:
+  print(num *20)
+
+names = ["Elie", "Tim", "Matt"]
+
+first_letters = [name[0] for name in names]
+print(first_letters)
+
+numbers = [1,2,3,4,5,6]
+
+evens = [num for num in numbers if num %2 == 0]
+print(evens)
+
+list1 = [1,2,3,4]
+list2 = [3,4,5,6]
+
+common = [num for num in list1 if num in list2]
+print(common)
+
+words = ["Elie", "Tim", "Matt"]
+
+reversed_words = [word[::-1].lower() for word in words]
+print(reversed_words)
+
+str1 = "first"
+str2 = "third"
+
+common_letters = [letter for letter in str1 if letter in str2]
+print(common_letters)
+
+divisible_by_12 = [num for num in range(1,101) if num %12 == 0]
+print(divisible_by_12)
+
+word = "amazing"
+vowels = "aeiou"
+
+no_vowels = [letter for letter in word if letter not in vowels]
+print(no_vowels)
+
+result = [[num for num in range(3)] for _ in range(3)]
+print(result)
+
+result = [[num for num in range(10)] for _ in range(10)]
+print(result)
+
+# 🌟 Exercise 1: Add Two Numbers
+def add_two_numbers(a, b):
+    return a + b
+
+print("Exercise 1 Results:")
+print(add_two_numbers(3, 5))    # Output: 8
+print(add_two_numbers(10, 20))  # Output: 30
+print()  # Just adds a blank line for readability
+
+# 🌟 Exercise 2: Print a Greeting
+def greet(name):
+    print(f"Hello, {name}!")
+
+print("Exercise 2 Results:")
+greet("Alice")  # Output: Hello, Alice!
+greet("Bob")    # Output: Hello, Bob!
+print()
+
+# 🌟 Exercise 3: Check if Number is Even or Odd
+def check_even_odd(number):
+    if number % 2 == 0:
+        print("Even")
+    else:
+        print("Odd")
+
+print("Exercise 3 Results:")
+check_even_odd(4)  # Output: Even
+check_even_odd(7)  # Output: Odd
+print()
+
+# 🌟 Exercise 4: Sum of Numbers in a List
+def sum_list(numbers):
+    return sum(numbers)
+
+print("Exercise 4 Results:")
+print(sum_list([1, 2, 3, 4]))  # Output: 10
+print(sum_list([5, 5, 5]))     # Output: 15
+
+# 🌟 Exercise 1: Return the Largest Number
+def find_largest(numbers):
+    return max(numbers)
+
+# 🌟 Exercise 2: Check for Letter in Word
+def check_letter(word, letter):
+    return letter in word
+
+# 🌟 Exercise 3: Count to a Number
+def count_to_number(number):
+    for i in range(1, number + 1):
+        print(i)
+
+# -------------------------
+# Example usage:
+
+# Exercise 1
+print("Largest number:", find_largest([1, 2, 3, 4]))  # Output: 4
+print("Largest number:", find_largest([10, 20, 5]))   # Output: 20
+
+# Exercise 2
+print("Letter check:", check_letter("apple", "a"))    # Output: True
+print("Letter check:", check_letter("banana", "z"))   # Output: False
+
+# Exercise 3
+print("Count to 3:")
+count_to_number(3)
+print("Count to 5:")
+count_to_number(5)
